@@ -32,7 +32,7 @@ Usage: bmsicast.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
 -`bam` \<string\> the path of input BAM file. \
 -`outputdir` \<string\> output directory. \
 -`sample` \<string\> sample name. \
--`prefix` \<string\> prefix for baseline databases. \
+-`prefix` \<string\> prefix for baseline databases.
  
 # Example
 An example command to run MSI detection on a single pre-deduplication BAM is:
