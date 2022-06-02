@@ -14,7 +14,7 @@ User can run the script ConstructeBaseline.sh to build the MSS Model and Baselin
 
 Usage: ConstructeBaseline.sh <bed file> <model inputdir> <baseline inputdir> <outputdir> <ci> <prefix>
 
-##Options
+## Options
 -`bed file` \<string\> the list of markers to those presented in your capture design,format:"chr\tstart\tend\tname\tdepthcutoff\tfraction".\
 -`model inputdir` \<string\> the path of directory containg alleledistribution files for building MSS Model.User generates there files with Dup_AlleleCaller.pl\
 -`baseline inputdir` \<string\> the path of directory containg alleledistribution files for building BASELINE.User generates there files with Dup_AlleleCaller.pl\
