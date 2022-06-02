@@ -16,8 +16,8 @@ Usage: ConstructeBaseline.sh <bed file> <model inputdir> <baseline inputdir> <ou
 
 ## Options
 -`bed file` \<string\> the list of markers to those presented in your capture design,format:"chr\tstart\tend\tname\tdepthcutoff\tfraction".\
--`model inputdir` \<string\> the path of directory containg alleledistribution files for building MSS Model.User generates there files with Dup_AlleleCaller.pl\
--`baseline inputdir` \<string\> the path of directory containg alleledistribution files for building BASELINE.User generates there files with Dup_AlleleCaller.pl\
+-`model inputdir` \<string\> the path of directory containg alleledistribution files for building MSS Model.User generates there files with Dup_AlleleCaller.pl \
+-`baseline inputdir` \<string\> the path of directory containg alleledistribution files for building BASELINE.User generates there files with Dup_AlleleCaller.pl \
 -`outputdir` \<string\> output directory. \
 -`ci` \<string\>  Confidence interval to determine MSI-H/MSS.\
 -`prefix` \<string\> prefix for output files.
