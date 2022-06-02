@@ -25,7 +25,7 @@ Usage: ConstructeBaseline.sh <bed file> <model inputdir> <baseline inputdir> <ou
 
 ## run MSI detection
 
-Usage: bmsicast.sh <database> <bam>  <outputdir> <sample> <prefix>
+Usage: bmsicast.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
 
 ## Options
 -`database` \<string\> the directory that contains baseline databases.  
