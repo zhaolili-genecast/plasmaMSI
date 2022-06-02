@@ -28,11 +28,11 @@ Usage: ConstructeBaseline.sh <bed file> <model inputdir> <baseline inputdir> <ou
 Usage: bmsicast.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
 
 ## Options
--`database` \<string\> the directory that contains baseline databases.  
--`bam` \<string\> the path of input BAM file.  
--`outputdir` \<string\> output directory.
--`sample` \<string\> sample name.
--`prefix` \<string\> prefix for baseline databases.  
+-`database` \<string\> the directory that contains baseline databases. \
+-`bam` \<string\> the path of input BAM file. \
+-`outputdir` \<string\> output directory. \
+-`sample` \<string\> sample name. \
+-`prefix` \<string\> prefix for baseline databases. \
  
 # Example
 An example command to run MSI detection on a single pre-deduplication BAM is:
