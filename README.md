@@ -1,4 +1,4 @@
-# btMSI-CAST
+# bMSI-CAST
 
 bMSI-CAST (blood MSI Caller Adjusted with Sequence duplicaTes), an NGS-based  MSI detection method is compatible plasma samples and does not require matched normal samples.
 
