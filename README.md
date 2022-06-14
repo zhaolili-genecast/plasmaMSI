@@ -37,7 +37,7 @@ Usage: bmsicast.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
 # Example
 An example command to run MSI detection on a single pre-deduplication BAM is:
 ```
-perl $0 -database <database> -bam `bam` -flank 2 -num 2 -minsize 1 -quality 1  -outdir MSI -prefix `prefix`
+sh $0  <database>  `bam`  MSI sample test
 ```
 The program takes a pre-deduplication BAM as input, perform duplication removal, call allele distribution, call loci-level MSI status and sample-level MSI status.
 
