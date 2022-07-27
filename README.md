@@ -1,9 +1,9 @@
-# bMSI-CAST
+# plasmaMSI
 
-bMSI-CAST (blood MSI Caller Adjusted with Sequence duplicaTes), an NGS-based  MSI detection method is compatible plasma samples and does not require matched normal samples.
+plasmaMSI, an NGS-based  MSI detection method is compatible plasma samples and does not require matched normal samples.
 
 # Installation
-bMSI-CAST is written in Perl. Directly download the entire directory and run bmsicast.sh to perform MSI dectection on a single test sample. No extra compilation is required.
+plasmaMSI is written in Perl. Directly download the entire directory and run plasmaMSI.sh to perform MSI dectection on a single test sample. No extra compilation is required.
 
 # Usage
 
@@ -25,7 +25,7 @@ Usage: ConstructeBaseline.sh <bed file> <model inputdir> <baseline inputdir> <ou
 
 ## run MSI detection
 
-Usage: bmsicast.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
+Usage: plasmaMSI.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
 
 ## Options
 -`database` \<string\> the directory that contains baseline databases. \
@@ -37,7 +37,7 @@ Usage: bmsicast.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
 # Example
 An example command to run MSI detection on a single pre-deduplication BAM is:
 ```
-sh bmsicast.sh  ../database  sample.sorted.mkdup.realign.bam  ../examples sample test
+sh plasmaMSI.sh  ../database  sample.sorted.mkdup.realign.bam  ../examples sample test
 ```
 The program takes a pre-deduplication BAM as input, perform duplication removal, call allele distribution, call loci-level MSI status and sample-level MSI status.
 
