@@ -1,14 +1,15 @@
 # plasmaMSI
 
-plasmaMSI, an NGS-based  MSI detection method is compatible plasma samples and does not require matched normal samples.
+plasmaMSI is an algorithm to detect microsatellite instability in plasma cell-free DNA from NGS data.
+
+- It does not require a matched normal sample.
 
 # Installation
 plasmaMSI is written in Perl. Directly download the entire directory and run plasmaMSI.sh to perform MSI dectection on a single test sample. No extra compilation is required.
 
 # Usage
 
-Version 0.10
-## baseline construction
+## Baseline construction
 
 User can run the script ConstructeBaseline.sh to build the MSS Model and Baseline.
 
@@ -23,7 +24,7 @@ Usage: ConstructeBaseline.sh <bed file> <model inputdir> <baseline inputdir> <ou
 -`prefix` \<string\> prefix for output files.
 
 
-## run MSI detection
+## How to run
 
 Usage: plasmaMSI.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
 
@@ -34,7 +35,7 @@ Usage: plasmaMSI.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
 -`sample` \<string\> sample name. \
 -`prefix` \<string\> prefix for baseline databases.
  
-# Example
+## Example commandlines
 An example command to run MSI detection on a single pre-deduplication BAM is:
 ```
 sh plasmaMSI.sh  ../database  sample.sorted.mkdup.realign.bam  ../examples sample test
@@ -42,22 +43,22 @@ sh plasmaMSI.sh  ../database  sample.sorted.mkdup.realign.bam  ../examples sampl
 The program takes a pre-deduplication BAM as input, perform duplication removal, call allele distribution, call loci-level MSI status and sample-level MSI status.
 
 Output files include:
-1. `sample`.reads.txt
-Each entry contains spanning reads information (readID, microsatellite sequence, read sequence, CIGAR and loci name) from the input BAM file.
+
+1. `sample`.reads.txt: Each line contains spanning reads information (readID, microsatellite sequence, read sequence, CIGAR and loci name) from the input BAM file.
  
-2. `sample`.DUP.txt
-Each row contains the loci name, reference name, aligned starting position, insert size, lengths of each members pertaining to a family.
+2. `sample`.DUP.txt: Each line contains the loci name, reference name, aligned starting position, insert size, lengths of each members pertaining to a family.
 
-3. `sample`.allele.txt
-Each row represents info. of all fragments covering a locus, including dup-ratios, and allele length offsets compared to the germline allele and corresponding frequencies.
+3. `sample`.allele.txt: Each line represents information of all fragments covering a locus, including dup-ratios, and allele length offsets compared to the germline allele and corresponding frequencies.
 
-4. `sample`.kld.txt
+4. `sample`.kld.txt: Each line represents information of all fragments covering a locus, including KLD value, dup-ratios, and allele length offsets compared to the germline allele and corresponding frequencies.
 
-Each row represents info. of all fragments covering a locus, including KLD value, dup-ratios, and allele length offsets compared to the germline allele and corresponding frequencies.
+5. `prefix`.msi.txt: Sample-level MSI calling results.
 
-5. `prefix`.msi.txt
-One line sample-level MSI calling results.
+# Publication
+- Fengchang Huang, Lili Zhao, Hongyu Xie, Tiancheng Han, Jian Huang, Xiaoqing Wang, Jun Yang, Yuanyuan Hong, Jingchao Shu, Jianing Yu, Qingyun Li, Yu S. Huang, Weizhi Chen, Ji He, Wenliang Li. plasmaMSI: a systematic method to detect next-generation sequencing-based microsatellite instability in plasma cell-free DNA (2024 Under review)
+
 
 
 # Contact
-We can be reached by: Lili Zhao, zhao.lili@genecast.com.cn; Hongyu Xie, xie.hongyu@genecast.com.cn
+- Lili Zhao (zhaolili_607@126.com)
+- Yu S. Huang (polyactis@gmail.com)
