@@ -2,20 +2,21 @@
 
 plasmaMSI is an algorithm to detect microsatellite instability in plasma cell-free DNA from NGS data.
 
-- It does not require a matched normal sample.
-
 # Installation
 plasmaMSI is written in Perl. Directly download the entire directory and run plasmaMSI.sh to perform MSI dectection on a single test sample. No extra compilation is required.
 
 # Usage
 
-## Baseline construction
+## ConstructeBaseline.sh: Baseline construction
 
-User can run the script ConstructeBaseline.sh to build the MSS Model and Baseline.
+User can run the script ConstructeBaseline.sh to build the Baseline MSS Model.
 
-Usage: ConstructeBaseline.sh <bed file> <model inputdir> <baseline inputdir> <outputdir> <ci> <prefix>
+Usage: 
+```bash
+ConstructeBaseline.sh <bed file> <model inputdir> <baseline inputdir> <outputdir> <ci> <prefix>
+```
 
-## Options
+### Options
 -`bed file` \<string\> the list of markers to those presented in your capture design,format:"chr\tstart\tend\tname\tdepthcutoff\tfraction".\
 -`model inputdir` \<string\> the path of directory containg alleledistribution files for building MSS Model.User generates there files with Dup_AlleleCaller.pl \
 -`baseline inputdir` \<string\> the path of directory containg alleledistribution files for building BASELINE.User generates there files with Dup_AlleleCaller.pl \
@@ -24,21 +25,24 @@ Usage: ConstructeBaseline.sh <bed file> <model inputdir> <baseline inputdir> <ou
 -`prefix` \<string\> prefix for output files.
 
 
-## How to run
+## plasmaMSI.sh: Call if a sample is MSI or MSS
 
-Usage: plasmaMSI.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
+Usage: 
+```bash
+plasmaMSI.sh \<database\> \<bam\>  \<outputdir\> \<sample\> \<prefix\>
+```
 
-## Options
+### Options
 -`database` \<string\> the directory that contains baseline databases. \
 -`bam` \<string\> the path of input BAM file. \
 -`outputdir` \<string\> output directory. \
 -`sample` \<string\> sample name. \
 -`prefix` \<string\> prefix for baseline databases.
  
-## Example commandlines
+### Other examples
 An example command to run MSI detection on a single pre-deduplication BAM is:
-```
-sh plasmaMSI.sh  ../database  sample.sorted.mkdup.realign.bam  ../examples sample test
+```bash
+plasmaMSI.sh  ../database  sample.sorted.mkdup.realign.bam  ../examples sample test
 ```
 The program takes a pre-deduplication BAM as input, perform duplication removal, call allele distribution, call loci-level MSI status and sample-level MSI status.
 
